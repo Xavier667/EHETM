@@ -61,7 +61,7 @@ Dataset/
 Each sequence in the dataset contains synchronized frame images, event data, and corresponding timestamps, including `frames/`, `events/`, `frame_timestamp.txt`, and `event_timestamp.txt`. 
 
 - **frames/**: intensity images captured at a fixed frame rate (25hz)  
-- **events/**: event data recorded by the event camera  
+- **events/**: event time-sliced recorded by the event camera  
 - **frame_timestamp.txt**: timestamps for each frame  
 - **event_timestamp.txt**: timestamps for event data  
 - **Flow/** (if available): ground-truth optical flow (dynamic-object scenes only)
