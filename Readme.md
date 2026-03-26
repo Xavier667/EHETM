@@ -58,6 +58,16 @@ Dataset/
 │   └── ...
 ```
 
+Each sequence in the dataset contains synchronized frame images, event data, and corresponding timestamps, including `frames/`, `events/`, `frame_timestamp.txt`, and `event_timestamp.txt`. 
+
+- **frames/**: intensity images captured at a fixed frame rate (25hz)  
+- **events/**: event data recorded by the event camera  
+- **frame_timestamp.txt**: timestamps for each frame  
+- **event_timestamp.txt**: timestamps for event data  
+- **Flow/** (if available): ground-truth optical flow (dynamic-object scenes only)
+
+The event data is captured using the ALPIX-Pizol camera, which outputs events in a time-sliced format rather than fully asynchronous streams. Specifically, events are grouped into temporal slices, where all events within each slice share a single timestamp, representing accumulated events over a short time window (1ms). This representation should be taken into account when processing events (e.g., voxelization or temporal alignment). More details about the sensor can be found on the Alpsentek official website: https://www.alpsentek.com/.
+
 ### 🔥 CTTH: Close-range Thermal Turbulence Hybrid Dataset
 
 <table align="center">
@@ -154,7 +164,7 @@ This provides a valuable benchmark for evaluating **generalization under real-wo
 
 ---
 
-The two datasets are designed to support:
+The datasets are designed to support:
 - **Turbulence mitigation**
 - **Event-based video/image restoration**
 ---
