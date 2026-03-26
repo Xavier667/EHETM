@@ -1,5 +1,5 @@
 # [CVPR 2026] High-Quality and Efficient Turbulence Mitigation with Events
-## ⭐ News
+## 📰 News
 2026.02.23: Our paper is accepted by CVPR 2026.
 
 2026.03.25: Our paper is now available online. [arXiv](https://arxiv.org/abs/2603.20708)
@@ -11,19 +11,19 @@ The code and dataset will be released soon.
 ## 📌 Overview
 
 <p align="center">
-  <img src="assets/overview_pipeline.png" width="80%">
+  <img src="assets/Figure1.jpg" width="60%">
 </p>
 
 <p align="center">
-  <em>Overview of the proposed event–frame turbulence imaging pipeline.</em>
+  <em>Workflow comparison between our EHETM and multiframe TM methods.</em>
 </p>
 
 <p align="center">
-  <img src="assets/dataset_visualization.png" width="80%">
+  <img src="assets/Figure5.jpg" width="100%">
 </p>
 
 <p align="center">
-  <em>Examples from our CTTH and LATH datasets, including ground truth, turbulent observations, and corresponding events.</em>
+  <em>Overall Architecture of the EHETM.</em>
 </p>
 
 ---
@@ -189,7 +189,7 @@ The datasets are designed to support:
 
 ## 📚 Citation
 
-If you find this repository/work helpful in your research, welcome to cite our paper and give a ⭐.
+If you find this work helpful in your research, welcome to cite our paper and give a ⭐.
 
 ```bibtex
 @article{zhang2026high,
