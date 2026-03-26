@@ -10,6 +10,24 @@ The code and dataset will be released soon.
 
 ## 📌 Overview
 
+<p align="center">
+  <img src="assets/overview_pipeline.png" width="80%">
+</p>
+
+<p align="center">
+  <em>Overview of the proposed event–frame turbulence imaging pipeline.</em>
+</p>
+
+<p align="center">
+  <img src="assets/dataset_visualization.png" width="80%">
+</p>
+
+<p align="center">
+  <em>Examples from our CTTH and LATH datasets, including ground truth, turbulent observations, and corresponding events.</em>
+</p>
+
+---
+
 ## 📦 Dataset
 
 We present **CTTH and LATH**, **two event–frame paired datasets** for turbulence imaging research, covering both **thermal** and **atmospheric** cases. We offer **Baidu Cloud Drive** ([Download Link](https://pan.baidu.com/s/xxxx), code: xxxx). Dataset structure is organized as:
@@ -168,3 +186,15 @@ The datasets are designed to support:
 - **Turbulence mitigation**
 - **Event-based video/image restoration**
 ---
+
+## 📚 Citation
+
+If you find this repository/work helpful in your research, welcome to cite our paper and give a ⭐.
+
+```bibtex
+@article{zhang2026high,
+  title={High-Quality and Efficient Turbulence Mitigation with Events},
+  author={Zhang, Xiaoran and Ding, Jian and Duan, Yuxing and Liu, Haoyue and Chen, Gang and Chang, Yi and Yan, Luxin},
+  journal={arXiv preprint arXiv:2603.20708},
+  year={2026}
+}
