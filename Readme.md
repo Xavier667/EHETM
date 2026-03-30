@@ -21,7 +21,7 @@ The full code will be released soon.
 </p>
 
 <p align="center">
-  <img src="assets/Figure5.jpg" width="100%">
+  <img src="assets/Figure1.jpg" width="100%">
 </p>
 
 <p align="center">
