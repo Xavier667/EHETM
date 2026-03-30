@@ -1,6 +1,6 @@
 # [CVPR 2026] High-Quality and Efficient Turbulence Mitigation with Events
 ## 📰 News
-2026.02.23: Our paper is accepted by CVPR 2026!
+2026.02.23: Our paper is accepted by CVPR 2026! 
 
 2026.03.25: Our paper is now available online. [arXiv](https://arxiv.org/abs/2603.20708)
 
