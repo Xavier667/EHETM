@@ -61,7 +61,7 @@ We release two event-based turbulence datasets for evaluating turbulence mitigat
 | --- | --- | --- | --- |
 | **CTTH** | Controlled turbulence testbed | Static and dynamic scenes with frames, events, ground truth, and flow | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
 | **LATH** | Long-range atmospheric turbulence | Real outdoor observations at 3.5 km, 5 km, 6.5 km, and 8 km | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
-| **Additional data** | Simulated and real-world measured sequences | Complete event streams and IMU ego-motion measurements | Baidu Netdisk (link coming soon) |
+| **Additional data** | Simulated and real-world measured sequences | Complete event streams and IMU ego-motion measurements | [Baidu Netdisk](https://pan.baidu.com/) (coming soon) |
 
 ### Additional dataset (coming soon)
 
@@ -181,11 +181,11 @@ The three released checkpoints retain the model parameters and the optimizer, sc
 
 | Checkpoint | Training domain | Baidu Netdisk | SHA-256 |
 | --- | --- | --- | --- |
-| `restoration_event_guided_finetune_CTTH.pt` | CTTH+ | Link coming soon | `d18d66bccff01b1215226d4526a10e50ad5d29b6f6d2a4e03df212870ef68ee7` |
-| `restoration_event_guided_finetune_EFTURB.pt` | EFTurb | Link coming soon | `8356afcd9c8ae6621d675f31046cf3696189298e66f35467332f70249031afd2` |
-| `restoration_event_guided_finetune_Joint.pt` | CTTH+ and EFTurb | Link coming soon | `c172a7b187feb6a05d5661b09b237ec339b8f20abebf42b40c0d56aa33974021` |
+| `restoration_event_guided_finetune_CTTH.pt` | CTTH+ | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) | `d18d66bccff01b1215226d4526a10e50ad5d29b6f6d2a4e03df212870ef68ee7` |
+| `restoration_event_guided_finetune_EFTURB.pt` | EFTurb | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) | `8356afcd9c8ae6621d675f31046cf3696189298e66f35467332f70249031afd2` |
+| `restoration_event_guided_finetune_Joint.pt` | CTTH+ and EFTurb | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) | `c172a7b187feb6a05d5661b09b237ec339b8f20abebf42b40c0d56aa33974021` |
 
-After downloading, place the files in `Code/checkpoints/`. Every checkpoint can be used directly for inference or passed to the fine-tuning script with `--finetune-resume`.
+Download and extract the checkpoint package, then place the three `.pt` files in `Code/checkpoints/`. Every checkpoint can be used directly for inference or passed to the fine-tuning script with `--finetune-resume`.
 
 ### Model-ready data layout
 
