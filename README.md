@@ -183,7 +183,7 @@ The three released checkpoints retain the model parameters and the optimizer, sc
 | --- | --- | --- |
 | `restoration_event_guided_finetune_CTTH.pt` | CTTH+ | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) |
 | `restoration_event_guided_finetune_EFTURB.pt` | EFTurb | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) |
-| `restoration_event_guided_finetune_Joint.pt` | CTTH+ and EFTurb | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) |
+| `restoration_event_guided_finetune_Joint.pt` | Joint | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) |
 
 Download and extract the checkpoint package, then place the three `.pt` files in `Code/checkpoints/`. Every checkpoint can be used directly for inference or passed to the fine-tuning script with `--finetune-resume`.
 
