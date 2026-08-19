@@ -1,0 +1,6 @@
+# Exact CTTH+ held-out sequences used by split_seed=42, train_ratio=0.9.
+seq_002
+seq_008
+seq_018
+seq_041
+seq_048
