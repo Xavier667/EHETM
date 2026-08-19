@@ -7,6 +7,7 @@
 </p>
 
 <p align="center">
+  <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf"><img src="https://img.shields.io/badge/CVPR_2026-Paper-1f6feb.svg" alt="CVPR 2026 paper"></a>
   <a href="https://arxiv.org/abs/2603.20708"><img src="https://img.shields.io/badge/arXiv-2603.20708-b31b1b.svg" alt="arXiv"></a>
   <a href="https://youtu.be/oZrPr5Mmn6c?si=PvmLqcTke8P2lcFD"><img src="https://img.shields.io/badge/Video-YouTube-ff0000.svg?logo=youtube" alt="Video"></a>
   <a href="#dataset"><img src="https://img.shields.io/badge/Dataset-CTTH%20%26%20LATH-2ea44f.svg" alt="Dataset"></a>
@@ -14,7 +15,7 @@
 </p>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2603.20708">Paper</a> ·
+  <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf">Paper</a> ·
   <a href="#video">Video</a> ·
   <a href="#dataset">Dataset</a> ·
   <a href="#environment">Installation</a> ·
@@ -27,6 +28,7 @@ Official PyTorch implementation of **EHETM**, an event-guided framework for high
 
 ## News
 
+- **2026-08-19:** The official CVPR 2026 paper is now available from [CVF Open Access](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf).
 - **2026-08-19:** We have expanded the benchmark with a new simulated dataset, EFTSim, and two real-world datasets, CTTH+ and LATH+, all of which provide complete event streams and IMU-based ego-motion measurements and will be released soon.
 - **2026-08-19:** Training and inference code is now available.
 - **2026-03-27:** The CTTH and LATH datasets were released.
