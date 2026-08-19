@@ -179,11 +179,11 @@ LPIPS initializes an AlexNet backbone on first use and may download its pretrain
 
 The three released checkpoints retain the model parameters and the optimizer, scheduler, AMP scaler, and training-progress states required to continue training. The public filenames intentionally do not encode training epochs.
 
-| Checkpoint | Training domain | Baidu Netdisk | SHA-256 |
+| Checkpoint | Training domain | Baidu Netdisk |
 | --- | --- | --- | --- |
-| `restoration_event_guided_finetune_CTTH.pt` | CTTH+ | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) | `d18d66bccff01b1215226d4526a10e50ad5d29b6f6d2a4e03df212870ef68ee7` |
-| `restoration_event_guided_finetune_EFTURB.pt` | EFTurb | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) | `8356afcd9c8ae6621d675f31046cf3696189298e66f35467332f70249031afd2` |
-| `restoration_event_guided_finetune_Joint.pt` | CTTH+ and EFTurb | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) | `c172a7b187feb6a05d5661b09b237ec339b8f20abebf42b40c0d56aa33974021` |
+| `restoration_event_guided_finetune_CTTH.pt` | CTTH+ | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) |
+| `restoration_event_guided_finetune_EFTURB.pt` | EFTurb | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) |
+| `restoration_event_guided_finetune_Joint.pt` | CTTH+ and EFTurb | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) |
 
 Download and extract the checkpoint package, then place the three `.pt` files in `Code/checkpoints/`. Every checkpoint can be used directly for inference or passed to the fine-tuning script with `--finetune-resume`.
 
