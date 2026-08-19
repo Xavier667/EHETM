@@ -393,10 +393,12 @@ The number of `torchrun` processes must match the number of GPUs selected with `
 If this work or the released datasets are useful in your research, please cite our paper and consider starring the repository.
 
 ```bibtex
-@article{zhang2026high,
-  title={High-Quality and Efficient Turbulence Mitigation with Events},
-  author={Zhang, Xiaoran and Ding, Jian and Duan, Yuxing and Liu, Haoyue and Chen, Gang and Chang, Yi and Yan, Luxin},
-  journal={arXiv preprint arXiv:2603.20708},
-  year={2026}
+@InProceedings{Zhang_2026_CVPR,
+    author    = {Zhang, Xiaoran and Ding, Jian and Duan, Yuxing and Liu, Haoyue and Chen, Gang and Chang, Yi and Yan, Luxin},
+    title     = {High-Quality and Efficient Turbulence Mitigation with Events},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2026},
+    pages     = {29514-29525}
 }
 ```
