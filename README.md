@@ -400,9 +400,3 @@ If this work or the released datasets are useful in your research, please cite o
   year={2026}
 }
 ```
-
-## Acknowledgements
-
-This implementation builds on PyTorch, Mamba selective scan, causal-conv1d, timm, LPIPS, and a generalized 3D Hilbert/Gilbert curve implementation. Third-party notices retained in the source files remain applicable.
-
-For questions about the code or data, please open an issue in this repository.
