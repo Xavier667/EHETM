@@ -28,9 +28,9 @@ Official PyTorch implementation of **EHETM**, an event-guided framework for high
 
 ## News
 
-- **2026-08-19:** The official CVPR 2026 paper is now available from [CVF Open Access](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf).
 - **2026-08-19:** We have expanded the benchmark with a new simulated dataset, EFTSim, and two real-world datasets, CTTH+ and LATH+, all of which provide complete event streams and IMU-based ego-motion measurements and will be released soon.
 - **2026-08-19:** Training and inference code is now available.
+- **2026-06-05:** The official CVPR 2026 paper is now available from [CVF Open Access](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf).
 - **2026-03-27:** The CTTH and LATH datasets were released.
 - **2026-03-25:** The paper was published on [arXiv](https://arxiv.org/abs/2603.20708).
 - **2026-02-23:** EHETM was accepted by CVPR 2026 as a Highlight paper.
