@@ -72,7 +72,7 @@ For compatibility, the released code retains the internal identifier **EFTurb** 
 
 ### CTTH
 
-The **Controlled Turbulence Testbed with High-Speed Events (CTTH)** dataset contains both static and dynamic scenes captured under controlled turbulence. Each sample provides synchronized frame and event measurements; the dynamic subset additionally contains optical-flow annotations used by the training pipeline.
+The **CTTH** dataset contains both static and dynamic scenes captured under controlled turbulence. Each sample provides synchronized frame and event measurements; the dynamic subset additionally contains optical-flow annotations used by the training pipeline.
 
 ```text
 CTTH/
@@ -113,7 +113,7 @@ CTTH/
 
 ### LATH
 
-The **Long-range Atmospheric Turbulence with High-Speed Events (LATH)** dataset contains event and frame measurements captured over real atmospheric paths ranging from 3.5 km to 8 km. It is intended to evaluate generalization under realistic, long-range turbulence.
+The **LATH** dataset contains event and frame measurements captured over real atmospheric paths ranging from 3.5 km to 8 km. It is intended to evaluate generalization under realistic, long-range turbulence.
 
 | Distance | Turbulence frames | Events |
 |:---:|:---:|:---:|
