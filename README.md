@@ -396,14 +396,6 @@ torchrun --standalone --nproc_per_node=2 train_stage3_finetuning.py \
 
 The number of `torchrun` processes must match the number of GPUs selected with `--gpus`. Training logs and validation outputs report PSNR, SSIM, and LPIPS only.
 
-## Reproducibility
-
-- Random seeds default to `42`.
-- Event voxels use signed log normalization with `voxel_scale=4.0`.
-- Flow targets use non-negative log normalization with `flow_scale=4000.0`.
-- Training crops must be positive and divisible by four.
-- Use the manifests in `Code/Data/splits/` for directly comparable evaluation.
-
 ## Citation
 
 If this work or the released datasets are useful in your research, please cite our paper and consider starring the repository.
