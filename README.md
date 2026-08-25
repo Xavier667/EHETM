@@ -135,7 +135,7 @@ The **Long-range Atmospheric Turbulence with High-Speed Events (LATH)** dataset 
 | 6.5 km | <img src="assets/6.5km_turb.gif" width="320"> | <img src="assets/6.5km_Event_video.gif" width="320"> |
 | 8 km | <img src="assets/8km_turb.gif" width="320"> | <img src="assets/8km_Event_video.gif" width="320"> |
 
-The event data are stored as `.npz` files containing `x`, `y`, `p`, and `t`. Data were captured with an [ALPIX-Pizol event camera](https://www.alpix.com.cn/).
+The event data are stored as `.npz` files containing `x`, `y`, `p`, and `t`. Data were captured with an [ALPIX-Pizol event camera](https://en.alpsentek.com/new/gesp-hybrid-vision-sensor-alpix-pizol-apx014-unveiled-alpsentek-expands-machine-perception-dynamics/).
 
 ## Code and Models
 
