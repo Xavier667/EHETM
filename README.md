@@ -1,10 +1,4 @@
-# High-Quality and Efficient Turbulence Mitigation with Events
-
-<p align="center"><strong>CVPR 2026 Highlight</strong></p>
-
-<p align="center">
-  Xiaoran Zhang · Jian Ding · Yuxing Duan · Haoyue Liu · Gang Chen · Yi Chang · Luxin Yan
-</p>
+# High-Quality and Efficient Turbulence Mitigation with Events [CVPR 2026 Highlight]
 
 <p align="center">
   <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf"><img src="https://img.shields.io/badge/CVPR_2026-Paper-1f6feb.svg" alt="CVPR 2026 paper"></a>
