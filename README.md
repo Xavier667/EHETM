@@ -39,13 +39,6 @@ Official PyTorch implementation of **EHETM**, an event-guided framework for high
 
 Atmospheric turbulence causes spatially varying geometric distortion and blur, making long-range imaging difficult. EHETM uses high-temporal-resolution event measurements to guide motion estimation and image restoration while retaining an efficient model design.
 
-### Highlights
-
-- **Event-guided restoration:** high-temporal-resolution events provide motion cues that complement turbulence-degraded intensity frames.
-- **Efficient staged design:** ET estimates event motion, EPAW aligns and weights the event prior, and Ref-MambaTM restores the image sequence.
-- **End-to-end release:** training, inference, evaluation, pretrained checkpoints, and deterministic test splits are included.
-- **Broader evaluation data:** controlled, long-range, simulated, and expanded real-world datasets are available from the links below.
-
 ![EHETM overview](assets/Figure1.jpg)
 
 ![EHETM framework](assets/Figure5.jpg)
