@@ -10,25 +10,25 @@
   <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf"><img src="https://img.shields.io/badge/CVPR_2026-Paper-1f6feb.svg" alt="CVPR 2026 paper"></a>
   <a href="https://arxiv.org/abs/2603.20708"><img src="https://img.shields.io/badge/arXiv-2603.20708-b31b1b.svg" alt="arXiv"></a>
   <a href="https://youtu.be/oZrPr5Mmn6c?si=PvmLqcTke8P2lcFD"><img src="https://img.shields.io/badge/Video-YouTube-ff0000.svg?logo=youtube" alt="Video"></a>
-  <a href="#dataset"><img src="https://img.shields.io/badge/Dataset-CTTH%20%26%20LATH-2ea44f.svg" alt="Dataset"></a>
+  <a href="#datasets"><img src="https://img.shields.io/badge/Datasets-CTTH%20%7C%20LATH%20%7C%20CTTH%2B%20%7C%20EFTSim-2ea44f.svg" alt="Datasets"></a>
   <a href="#code-and-models"><img src="https://img.shields.io/badge/Code-PyTorch-ee4c2c.svg?logo=pytorch" alt="Code"></a>
 </p>
 
 <p align="center">
   <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf">Paper</a> ·
   <a href="#video">Video</a> ·
-  <a href="#dataset">Dataset</a> ·
+  <a href="#datasets">Datasets</a> ·
   <a href="#environment">Installation</a> ·
   <a href="#inference">Inference</a> ·
   <a href="#training">Training</a> ·
   <a href="#citation">Citation</a>
 </p>
 
-Official PyTorch implementation of **EHETM**, an event-guided framework for high-quality and efficient turbulence mitigation. This repository provides the complete staged training pipeline, unified inference for synthetic and real data, dataset resources, and checkpoints that support both inference and continued training.
+Official PyTorch implementation of **EHETM**, an event-guided framework for high-quality and efficient turbulence mitigation. The repository includes the complete staged training pipeline, unified inference for simulated and real-world data, pretrained checkpoints, and the CTTH, LATH, CTTH+, and EFTSim dataset resources.
 
 ## News
 
-- **2026-08-19:** We have expanded the benchmark with a new simulated dataset, EFTSim, and two real-world datasets, CTTH+ and LATH+, all of which provide complete event streams and IMU-based ego-motion measurements and will be released soon.
+- **2026-08-25:** **CTTH+ and EFTSim are now available** from the [Additional data](#additional-data-ctth-and-eftsim) download.
 - **2026-08-19:** Training and inference code is now available.
 - **2026-06-05:** The official CVPR 2026 paper is now available from [CVF Open Access](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf).
 - **2026-03-27:** The CTTH and LATH datasets were released.
@@ -38,6 +38,13 @@ Official PyTorch implementation of **EHETM**, an event-guided framework for high
 ## Overview
 
 Atmospheric turbulence causes spatially varying geometric distortion and blur, making long-range imaging difficult. EHETM uses high-temporal-resolution event measurements to guide motion estimation and image restoration while retaining an efficient model design.
+
+### Highlights
+
+- **Event-guided restoration:** high-temporal-resolution events provide motion cues that complement turbulence-degraded intensity frames.
+- **Efficient staged design:** ET estimates event motion, EPAW aligns and weights the event prior, and Ref-MambaTM restores the image sequence.
+- **End-to-end release:** training, inference, evaluation, pretrained checkpoints, and deterministic test splits are included.
+- **Broader evaluation data:** controlled, long-range, simulated, and expanded real-world datasets are available from the links below.
 
 ![EHETM overview](assets/Figure1.jpg)
 
@@ -55,19 +62,26 @@ Atmospheric turbulence causes spatially varying geometric distortion and blur, m
   <a href="https://youtu.be/oZrPr5Mmn6c?si=PvmLqcTke8P2lcFD"><strong>▶ Watch the EHETM project video on YouTube</strong></a>
 </p>
 
-## Dataset
+## Datasets
 
-We release two event-based turbulence datasets for evaluating turbulence mitigation in controlled and long-range real-world environments.
+We provide the two datasets introduced with EHETM, together with CTTH+ and EFTSim for broader evaluation. Use the original CTTH and LATH download for the paper datasets and the Additional data download for the expanded collection.
 
-| Dataset | Setting | Contents | Download |
+| Dataset | Setting | Main contents | Download |
 | --- | --- | --- | --- |
 | **CTTH** | Controlled turbulence testbed | Static and dynamic scenes with frames, events, ground truth, and flow | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
 | **LATH** | Long-range atmospheric turbulence | Real outdoor observations at 3.5 km, 5 km, 6.5 km, and 8 km | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
-| **Additional data** | Simulated and real-world measured sequences | Complete event streams and IMU ego-motion measurements | [Baidu Netdisk](https://pan.baidu.com/) (coming soon) |
+| **Additional data** | CTTH+ and EFTSim | Expanded real-world and simulated sequences with complete event streams and IMU-based ego-motion measurements | [Event_Turb_Datasets](https://pan.baidu.com/s/1anYvXzc6in3YCowZ2SBBGw?pwd=qaz3) (code: `qaz3`) |
 
-### Additional dataset (coming soon)
+### Additional data: CTTH+ and EFTSim
 
-We are preparing an expanded dataset comprising both simulated sequences and real-world measurements. The collection provides complete event streams and IMU ego-motion measurements for broader evaluation under complementary controlled and measured conditions. A Baidu Netdisk download link will be added here when the data are released.
+> **Download:** [Event_Turb_Datasets on Baidu Netdisk](https://pan.baidu.com/s/1anYvXzc6in3YCowZ2SBBGw?pwd=qaz3) · Extraction code: `qaz3`
+
+The additional collection contains two complementary datasets:
+
+- **CTTH+** extends the controlled real-world data with complete event streams and IMU-based ego-motion measurements.
+- **EFTSim** provides simulated turbulence sequences for training and quantitative evaluation, also with complete event streams and ego-motion information.
+
+For compatibility, the released code retains the internal identifier **EFTurb** (`efturb`) in dataset classes, command-line options, split filenames, and checkpoints. These references all correspond to EFTSim; the downloaded dataset folder itself does not need to be renamed.
 
 ### CTTH
 
@@ -130,7 +144,7 @@ The event data are stored as `.npz` files containing `x`, `y`, `p`, and `t`. Dat
 ```text
 EHETM/
 ├── Code/
-│   ├── Data/                         # EFTurb and CTTH+ dataset loaders
+│   ├── Data/                         # EFTSim (EFTurb in code) and CTTH+ loaders
 │   │   └── splits/                   # Deterministic test manifests
 │   ├── Model/                        # ET, EPAW, and Ref-MambaTM
 │   ├── Utils/                        # Metrics and training utilities
@@ -184,20 +198,20 @@ The three released checkpoints retain the model parameters and the optimizer, sc
 | Checkpoint | Training domain | Baidu Netdisk |
 | --- | --- | --- |
 | `restoration_event_guided_finetune_CTTH.pt` | CTTH+ | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) |
-| `restoration_event_guided_finetune_EFTURB.pt` | EFTurb | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) |
+| `restoration_event_guided_finetune_EFTURB.pt` | EFTSim (`EFTurb` in code) | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) |
 | `restoration_event_guided_finetune_Joint.pt` | Joint | [Baidu Netdisk](https://pan.baidu.com/s/1l4Dglqffld-TfRbDI9E_qw) (code: `qaz3`) |
 
 Download and extract the checkpoint package, then place the three `.pt` files in `Code/checkpoints/`. Every checkpoint can be used directly for inference or passed to the fine-tuning script with `--finetune-resume`.
 
 ### Model-ready data layout
 
-The released loaders expect preprocessed EFTurb and CTTH+ data in the following layouts. Dataset locations are always supplied through command-line arguments; no machine-specific absolute paths are embedded in the code.
+The released loaders expect preprocessed EFTSim and CTTH+ data in the following layouts. EFTSim retains the internal identifier `EFTurb` for compatibility with the code and checkpoints. Dataset locations are always supplied through command-line arguments; no machine-specific absolute paths are embedded in the code.
 
 <details>
-<summary><strong>EFTurb layout</strong></summary>
+<summary><strong>EFTSim layout (EFTurb in code)</strong></summary>
 
 ```text
-EFTurb/
+EFTSim/
 └── <scenario>/<sequence>/
     ├── Turb/
     │   ├── frames/<frame>.png
@@ -241,13 +255,13 @@ Frame stems must be numeric. The default deterministic split uses seed `42` and 
 
 Run the following commands from `EHETM/Code`.
 
-### EFTurb
+### EFTSim (EFTurb in code)
 
 ```bash
 python infer_final.py \
   --checkpoint checkpoints/restoration_event_guided_finetune_EFTURB.pt \
   --data-format efturb \
-  --data-root /path/to/EFTurb \
+  --data-root /path/to/EFTSim \
   --test-list Data/splits/efturb_test_seed42_ratio0.9.txt \
   --output outputs/efturb \
   --tile-size 512 --overlap 64 --amp
@@ -281,7 +295,7 @@ python infer_final.py \
   --tile-size 512 --overlap 64 --amp --save-guide
 ```
 
-Each real sequence may use `frames/`, `events/`, and `event_voxel/`; the EFTurb and CTTH+ layouts are also accepted. If ground truth is present, use `gt/` or `ground_truth/` and retain the default `--gt auto`.
+Each real sequence may use `frames/`, `events/`, and `event_voxel/`; the EFTSim and CTTH+ layouts are also accepted. If ground truth is present, use `gt/` or `ground_truth/` and retain the default `--gt auto`.
 
 Inference writes restored PNG files, optional guidance maps, per-frame `metrics.csv`, and `summary.json`. Only the following image-quality metrics are reported:
 
@@ -302,11 +316,11 @@ All training scripts support command-line data and output paths. Run commands fr
 
 ```bash
 python train_stage1_et.py \
-  --data-root /path/to/EFTurb \
+  --data-root /path/to/EFTSim \
   --output checkpoints/stage1_et.pt
 ```
 
-Stage 1 uses the non-static EFTurb scenarios and supervises multi-frame event-to-motion prediction.
+Stage 1 uses the non-static EFTSim scenarios and supervises multi-frame event-to-motion prediction.
 
 </details>
 
@@ -315,7 +329,7 @@ Stage 1 uses the non-static EFTurb scenarios and supervises multi-frame event-to
 
 ```bash
 python train_stage2_epaw.py \
-  --data-root /path/to/EFTurb \
+  --data-root /path/to/EFTSim \
   --et-checkpoint checkpoints/stage1_et.pt \
   --output checkpoints/stage2_epaw.pt
 ```
@@ -329,7 +343,7 @@ ET is frozen in Stage 2. The resulting checkpoint contains both ET and EPAW weig
 
 ```bash
 python train_stage3_restoration.py \
-  --efturb-root /path/to/EFTurb \
+  --efturb-root /path/to/EFTSim \
   --ctth-root /path/to/CTTH+_Dataset \
   --output checkpoints/stage3_restoration.pt
 ```
@@ -344,7 +358,7 @@ This stage jointly pretrains Ref-MambaTM with degraded-image gradient guidance.
 ```bash
 python train_stage3_finetuning.py \
   --finetune-dataset joint \
-  --efturb-root /path/to/EFTurb \
+  --efturb-root /path/to/EFTSim \
   --ctth-root /path/to/CTTH+_Dataset \
   --epaw-checkpoint checkpoints/stage2_epaw.pt \
   --restoration-pretrained checkpoints/stage3_restoration.pt \
@@ -362,7 +376,7 @@ Use `--finetune-resume` to restore the model, optimizer, scheduler, and scaler s
 ```bash
 python train_stage3_finetuning.py \
   --finetune-dataset joint \
-  --efturb-root /path/to/EFTurb \
+  --efturb-root /path/to/EFTSim \
   --ctth-root /path/to/CTTH+_Dataset \
   --finetune-resume checkpoints/restoration_event_guided_finetune_Joint.pt \
   --output checkpoints/stage3_finetune_joint.pt
@@ -374,7 +388,7 @@ python train_stage3_finetuning.py \
 torchrun --standalone --nproc_per_node=2 train_stage3_finetuning.py \
   --gpus 0,1 \
   --finetune-dataset joint \
-  --efturb-root /path/to/EFTurb \
+  --efturb-root /path/to/EFTSim \
   --ctth-root /path/to/CTTH+_Dataset \
   --epaw-checkpoint checkpoints/stage2_epaw.pt \
   --restoration-pretrained checkpoints/stage3_restoration.pt
