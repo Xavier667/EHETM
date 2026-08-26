@@ -1,5 +1,5 @@
 # High-Quality and Efficient Turbulence Mitigation with Events [CVPR 2026 Highlight]
-# High Temporal Resolution Matters: High-Quality and Efficient Turbulence Mitigation with Events [TPAMI Underview]
+# High Temporal Resolution Matters: High-Quality and Efficient Turbulence Mitigation with Events [TPAMI Undereview]
 
 <p align="center">
   <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf"><img src="https://img.shields.io/badge/CVPR_2026-Paper-1f6feb.svg" alt="CVPR 2026 paper"></a>
