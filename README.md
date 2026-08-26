@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf">Paper</a> ·
-  <a href="#video">Video</a> ·
+  <a href="#video-demo">Video</a> ·
   <a href="#datasets">Datasets</a> ·
   <a href="#environment">Installation</a> ·
   <a href="#inference">Inference</a> ·
@@ -18,7 +18,7 @@
   <a href="#citation">Citation</a>
 </p>
 
-Official PyTorch implementation of **EHETM**, an event-guided framework for high-quality and efficient turbulence mitigation. The repository includes the complete staged training pipeline, unified inference for simulated and real-world data, pretrained checkpoints, and resources for the CVPR 2026 datasets **CTTH** and **LATH** and the TPAMI-extension (under reveiw) datasets **EFTSim** and **CTTH+**. **LATH+** will be released later.
+Official PyTorch implementation of **EHETM**, an event-guided framework for high-quality and efficient turbulence mitigation. The repository includes the complete staged training pipeline, unified inference for simulated and real-world data, pretrained checkpoints, and resources for the CVPR 2026 datasets **CTTH** and **LATH** and the TPAMI-extension (under review) datasets **EFTSim** and **CTTH+**. **LATH+** will be released later.
 
 ## 🚀 News
 
@@ -50,8 +50,8 @@ This repository covers five event-based turbulence datasets. CTTH and LATH were 
 | --- | --- | --- | --- |
 | **CTTH** | CVPR 2026 | Time-sliced events | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
 | **LATH** | CVPR 2026 | Time-sliced events | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
-| **EFTSim** | TPAMI extension | Complete event streams + IMU ego-motion | [Event_Turb_Datasets](https://pan.baidu.com/s/1anYvXzc6in3YCowZ2SBBGw?pwd=qaz3) (code: `qaz3`) |
-| **CTTH+** | TPAMI extension | Complete event streams + IMU ego-motion | [Event_Turb_Datasets](https://pan.baidu.com/s/1anYvXzc6in3YCowZ2SBBGw?pwd=qaz3) (code: `qaz3`) |
+| **EFTSim** | TPAMI extension | Complete event streams + IMU ego-motion | [Baidu Netdisk](https://pan.baidu.com/s/1anYvXzc6in3YCowZ2SBBGw?pwd=qaz3) (code: `qaz3`) |
+| **CTTH+** | TPAMI extension | Complete event streams + IMU ego-motion | [Baidu Netdisk](https://pan.baidu.com/s/1anYvXzc6in3YCowZ2SBBGw?pwd=qaz3) (code: `qaz3`) |
 | **LATH+** | TPAMI extension | Complete event streams + IMU ego-motion | **Coming soon** |
 
 ### CTTH
