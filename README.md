@@ -16,7 +16,6 @@
   <a href="#inference">Inference</a> ·
   <a href="#training">Training</a> ·
   <a href="#-citation">Citation</a> ·
-  <a href="#-acknowledgements">Acknowledgements</a>
 </p>
 
 Official PyTorch implementation of **EHETM**, an event-guided framework for high-quality and efficient turbulence mitigation. The repository includes the complete staged training pipeline, unified inference for simulated and real-world data, pretrained checkpoints, and resources for the CVPR 2026 datasets **CTTH** and **LATH** and the TPAMI-extension (under review) datasets **EFTSim** and **CTTH+**. **LATH+** will be released later.
