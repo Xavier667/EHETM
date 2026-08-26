@@ -23,7 +23,7 @@ Official PyTorch implementation of **EHETM**, an event-guided framework for high
 
 ## 🚀 News
 
-- **2026-08-25:** **EFTSim and CTTH+ are now publicly available** from the [dataset downloads](#-datasets). LATH+ will be released later.
+- **2026-08-25:** **EFTSim and CTTH+** are now publicly available from the [dataset downloads](#-datasets). LATH+ will be released later.
 - **2026-08-19:** Training and inference code is now available.
 - **2026-06-26:** An extended version of this work has been submitted to **TPAMI** and is currently **under review**. The extension introduces EFTSim, CTTH+, and LATH+.
 - **2026-06-05:** The official CVPR 2026 paper is now available from [CVF Open Access](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf).
@@ -57,11 +57,11 @@ This repository covers five event-based turbulence datasets. CTTH and LATH were 
 
 ### CTTH
 
-The **CTTH** dataset contains static and dynamic-object scenes captured under controlled turbulence. It provides synchronized intensity frames, time-sliced events, timestamps, ground truth, and optical flow for dynamic-object scenes.
+The **CTTH** dataset contains static and dynamic-object scenes captured under controlled thermal turbulence. It provides synchronized intensity frames, time-sliced events, timestamps, ground truth, and optical flow for dynamic-object scenes.
 
 ### LATH
 
-The **LATH** dataset contains synchronized frame and time-sliced event measurements captured over real atmospheric paths ranging from 3.5 km to 8 km. It is intended for evaluating generalization under realistic long-range turbulence.
+The **LATH** dataset contains synchronized frame and time-sliced event measurements captured over real-world atmospheric paths ranging from 3.5 km to 8 km. It is intended for evaluating generalization under realistic long-range atmospheric turbulence.
 
 ### EFTSim
 
@@ -69,7 +69,7 @@ The **LATH** dataset contains synchronized frame and time-sliced event measureme
 
 ### CTTH+
 
-**CTTH+** extends the controlled real-world turbulence data for the TPAMI study. In contrast to the time-sliced events in CTTH, CTTH+ provides complete event streams, IMU-based platform ego-motion measurements, clean and degraded frames, and motion or gradient supervision where available.
+**CTTH+** extends the controlled real-world thermal turbulence data for the TPAMI study. In contrast to the time-sliced events in CTTH, CTTH+ provides complete event streams, IMU-based platform ego-motion measurements, clean and degraded frames, and motion or gradient supervision where available.
 
 ### LATH+
 
