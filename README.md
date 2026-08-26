@@ -73,7 +73,7 @@ The **LATH** dataset contains synchronized frame and time-sliced event measureme
 
 ### LATH+
 
-**LATH+** is the extended long-range real-world dataset developed for the TPAMI study. It provides complete event streams and IMU-based platform ego-motion measurements for long-range atmospheric-turbulence sequences.
+**LATH+** is the extended long-range real-world dataset developed for the TPAMI extension. It provides complete event streams and IMU-based platform ego-motion measurements for long-range atmospheric-turbulence sequences.
 
 > **Release status:** LATH+ is not yet publicly available. The download will be added here—stay tuned.
 
