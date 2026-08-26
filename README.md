@@ -131,7 +131,7 @@ Each CTTH or LATH sequence contains synchronized frame images, event data, and c
 - **`event_timestamp.txt`:** timestamps for the event slices.
 - **`Flow/`** (when available): ground-truth optical flow for dynamic-object scenes.
 
-CTTH and LATH were captured with the [ALPIX-Pizol camera](https://www.alpsentek.com/), which outputs events in a time-sliced format rather than as fully asynchronous streams. All events in one slice share a timestamp and represent the events accumulated over a short 1 ms window. This representation should be considered during voxelization and temporal alignment. The provided [`tools/event_processing.py`](tools/event_processing.py) script converts the time-sliced events into voxels and polarity-alternation statistics.
+CTTH and LATH are captured with the [ALPIX-Pizol camera](https://www.alpsentek.com/), which outputs events in a time-sliced format rather than as fully asynchronous streams. All events in one slice share a timestamp and represent the events accumulated over a short 1 ms window. This representation should be considered during voxelization and temporal alignment. The provided [`tools/event_processing.py`](tools/event_processing.py) script converts the time-sliced events into voxels and polarity-alternation statistics.
 
 #### EFTSim, CTTH+, and LATH+: complete event streams with IMU
 
@@ -148,9 +148,9 @@ The TPAMI-extension datasets share the following high-level organization. Exact 
     └── Turb/
         ├── frames/                         # Turbulence-degraded images
         ├── events_raw/                     # Original complete event stream
-        ├── voxel_raw/                      # Voxels built from the original events
-        ├── events_ego_motion_compensated/  # Ego-motion-compensated events
-        ├── voxel_ego_motion_compensated/   # Voxels built after compensation
+        ├── event_raw_voxel/                      # Voxels built from the original events
+        ├── events/  # Ego-motion-compensated events
+        ├── event_voxel/   # Voxels built after compensation
         └── ego_motion/                     # IMU platform ego-motion measurements
 ```
 
@@ -268,7 +268,7 @@ Expected NPZ fields:
 - Event voxel: `voxel`, with shape `[2, 10, H, W]`.
 - Scalar flow target: `raw_gradient_flow`, with shape `[1, H, W]`.
 
-Frame stems must be numeric. The default deterministic split uses seed `42` and a `0.9` training ratio. The released test sequence lists are in `Code/Data/splits/`. See `tools/event_processing.py` for event preprocessing.
+Frame stems must be numeric. The default deterministic split uses seed `42` and a `0.9` training ratio. The released test sequence lists are in `Code/Data/splits/`.
 
 ## Inference
 
