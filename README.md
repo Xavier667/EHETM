@@ -4,25 +4,26 @@
 <p align="center">
   <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf"><img src="https://img.shields.io/badge/CVPR_2026-Paper-1f6feb.svg" alt="CVPR 2026 paper"></a>
   <a href="https://youtu.be/oZrPr5Mmn6c?si=PvmLqcTke8P2lcFD"><img src="https://img.shields.io/badge/Video-YouTube-ff0000.svg?logo=youtube" alt="Video"></a>
-  <a href="#datasets"><img src="https://img.shields.io/badge/Datasets-Events%20%26%20Images-2ea44f.svg" alt="Datasets"></a>
-  <a href="#code-and-models"><img src="https://img.shields.io/badge/Code-PyTorch-ee4c2c.svg?logo=pytorch" alt="Code"></a>
+  <a href="#-datasets"><img src="https://img.shields.io/badge/Datasets-Events%20%26%20Images-2ea44f.svg" alt="Datasets"></a>
+  <a href="#-code-and-models"><img src="https://img.shields.io/badge/Code-PyTorch-ee4c2c.svg?logo=pytorch" alt="Code"></a>
 </p>
 
 <p align="center">
   <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf">Paper</a> ·
   <a href="#video-demo">Video</a> ·
-  <a href="#datasets">Datasets</a> ·
+  <a href="#-datasets">Datasets</a> ·
   <a href="#environment">Installation</a> ·
   <a href="#inference">Inference</a> ·
   <a href="#training">Training</a> ·
-  <a href="#citation">Citation</a>
+  <a href="#-citation">Citation</a> ·
+  <a href="#-acknowledgements">Acknowledgements</a>
 </p>
 
 Official PyTorch implementation of **EHETM**, an event-guided framework for high-quality and efficient turbulence mitigation. The repository includes the complete staged training pipeline, unified inference for simulated and real-world data, pretrained checkpoints, and resources for the CVPR 2026 datasets **CTTH** and **LATH** and the TPAMI-extension (under review) datasets **EFTSim** and **CTTH+**. **LATH+** will be released later.
 
 ## 🚀 News
 
-- **2026-08-25:** **EFTSim and CTTH+ are now publicly available** from the [dataset downloads](#datasets). LATH+ will be released later.
+- **2026-08-25:** **EFTSim and CTTH+ are now publicly available** from the [dataset downloads](#-datasets). LATH+ will be released later.
 - **2026-08-19:** Training and inference code is now available.
 - **2026-06-26:** An extended version of this work has been submitted to **TPAMI** and is currently **under review**. The extension introduces EFTSim, CTTH+, and LATH+.
 - **2026-06-05:** The official CVPR 2026 paper is now available from [CVF Open Access](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf).
@@ -42,7 +43,7 @@ Official PyTorch implementation of **EHETM**, an event-guided framework for high
   <a href="https://youtu.be/oZrPr5Mmn6c?si=PvmLqcTke8P2lcFD"><strong>▶ Watch the EHETM project video on YouTube</strong></a>
 </p>
 
-## Datasets
+## 📦 Datasets
 
 This repository covers five event-based turbulence datasets. CTTH and LATH were introduced with the CVPR 2026 paper. EFTSim, CTTH+, and LATH+ form the dataset suite developed for the TPAMI extension, which is currently under review.
 
@@ -155,7 +156,7 @@ The TPAMI-extension datasets share the following high-level organization. Exact 
 
 The `Flow/` or `Optical_Flow/` directory may be omitted when optical-flow or gradient supervision is not applicable. The `Turb/` directory preserves both the original and ego-motion-compensated event representations so that compensation and alignment strategies can be evaluated consistently.
 
-## Code and Models
+## 🧠 Code and Models
 
 ### Repository structure
 
@@ -414,7 +415,7 @@ torchrun --standalone --nproc_per_node=2 train_stage3_finetuning.py \
 
 The number of `torchrun` processes must match the number of GPUs selected with `--gpus`. Training logs and validation outputs report PSNR, SSIM, and LPIPS only.
 
-## Citation
+## 📝 Citation
 
 If this work or the released datasets are useful in your research, please cite our paper and consider starring the repository.
 
@@ -428,3 +429,7 @@ If this work or the released datasets are useful in your research, please cite o
     pages     = {29514-29525}
 }
 ```
+
+## 🙏 Acknowledgements
+
+This project builds upon PyTorch, Mamba, causal-conv1d, LPIPS, and other open-source software. We sincerely thank their authors and maintainers for making their work available to the research community. We also thank everyone who contributed to data acquisition, annotation, experimental evaluation, and the maintenance of the released datasets and code.
