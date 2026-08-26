@@ -1,10 +1,10 @@
 # High-Quality and Efficient Turbulence Mitigation with Events [CVPR 2026 Highlight]
-# High Temporal Resolution Matters: High-Quality and Efficient Turbulence Mitigation with Events [TPAMI Undereview]
+# High Temporal Resolution Matters: High-Quality and Efficient Turbulence Mitigation with Events [TPAMI Under Review]
 
 <p align="center">
   <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf"><img src="https://img.shields.io/badge/CVPR_2026-Paper-1f6feb.svg" alt="CVPR 2026 paper"></a>
   <a href="https://youtu.be/oZrPr5Mmn6c?si=PvmLqcTke8P2lcFD"><img src="https://img.shields.io/badge/Video-YouTube-ff0000.svg?logo=youtube" alt="Video"></a>
-  <a href="#datasets"><img src="https://img.shields.io/badge/Datasets-Events&Images-2ea44f.svg" alt="Datasets"></a>
+  <a href="#datasets"><img src="https://img.shields.io/badge/Datasets-Events%20%26%20Images-2ea44f.svg" alt="Datasets"></a>
   <a href="#code-and-models"><img src="https://img.shields.io/badge/Code-PyTorch-ee4c2c.svg?logo=pytorch" alt="Code"></a>
 </p>
 
@@ -18,24 +18,17 @@
   <a href="#citation">Citation</a>
 </p>
 
-Official PyTorch implementation of **EHETM**, an event-guided framework for high-quality and efficient turbulence mitigation. The repository includes the complete staged training pipeline, unified inference for simulated and real-world data, pretrained checkpoints, and the CTTH, LATH, CTTH+, and EFTSim dataset resources.
+Official PyTorch implementation of **EHETM**, an event-guided framework for high-quality and efficient turbulence mitigation. The repository includes the complete staged training pipeline, unified inference for simulated and real-world data, pretrained checkpoints, and resources for the CVPR 2026 datasets **CTTH** and **LATH** and the TPAMI-extension datasets **EFTSim** and **CTTH+**. **LATH+** will be released later.
 
 ## News
 
-- **2026-08-25:** **CTTH+ and EFTSim are now available** from the [Additional data](#additional-data-ctth-and-eftsim) download.
+- **2026-08-25:** **EFTSim and CTTH+ are now publicly available** from the [dataset downloads](#datasets). LATH+ will be released later.
 - **2026-08-19:** Training and inference code is now available.
+- **2026-06-26:** An extended version of this work was submitted to **IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)** and is currently **under review**. The extension introduces EFTSim, CTTH+, and LATH+.
 - **2026-06-05:** The official CVPR 2026 paper is now available from [CVF Open Access](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf).
 - **2026-03-27:** The CTTH and LATH datasets were released.
 - **2026-03-25:** The paper was published on [arXiv](https://arxiv.org/abs/2603.20708).
 - **2026-02-23:** EHETM was accepted by CVPR 2026 as a Highlight paper.
-
-## Overview
-
-Atmospheric turbulence causes spatially varying geometric distortion and blur, making long-range imaging difficult. EHETM uses high-temporal-resolution event measurements to guide motion estimation and image restoration while retaining an efficient model design.
-
-![EHETM overview](assets/Figure1.jpg)
-
-![EHETM framework](assets/Figure5.jpg)
 
 ## Video
 
@@ -51,78 +44,116 @@ Atmospheric turbulence causes spatially varying geometric distortion and blur, m
 
 ## Datasets
 
-We provide the two datasets introduced with EHETM, together with CTTH+ and EFTSim for broader evaluation. Use the original CTTH and LATH download for the paper datasets and the Additional data download for the expanded collection.
+This repository covers five event-based turbulence datasets. CTTH and LATH were introduced with the CVPR 2026 paper. EFTSim, CTTH+, and LATH+ form the dataset suite developed for the TPAMI extension, which is currently under review.
 
-| Dataset | Setting | Main contents | Download |
+| Dataset | Release group | Event representation | Availability |
 | --- | --- | --- | --- |
-| **CTTH** | Controlled turbulence testbed | Static and dynamic scenes with frames, events, ground truth, and flow | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
-| **LATH** | Long-range atmospheric turbulence | Real outdoor observations at 3.5 km, 5 km, 6.5 km, and 8 km | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
-| **Additional data** | CTTH+ and EFTSim | Expanded real-world and simulated sequences with complete event streams and IMU-based ego-motion measurements | [Event_Turb_Datasets](https://pan.baidu.com/s/1anYvXzc6in3YCowZ2SBBGw?pwd=qaz3) (code: `qaz3`) |
-
-### Additional data: CTTH+ and EFTSim
-
-> **Download:** [Event_Turb_Datasets on Baidu Netdisk](https://pan.baidu.com/s/1anYvXzc6in3YCowZ2SBBGw?pwd=qaz3) · Extraction code: `qaz3`
-
-The additional collection contains two complementary datasets:
-
-- **CTTH+** extends the controlled real-world data with complete event streams and IMU-based ego-motion measurements.
-- **EFTSim** provides simulated turbulence sequences for training and quantitative evaluation, also with complete event streams and ego-motion information.
-
-For compatibility, the released code retains the internal identifier **EFTurb** (`efturb`) in dataset classes, command-line options, split filenames, and checkpoints. These references all correspond to EFTSim; the downloaded dataset folder itself does not need to be renamed.
+| **CTTH** | CVPR 2026 | Time-sliced events | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
+| **LATH** | CVPR 2026 | Time-sliced events | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
+| **EFTSim** | TPAMI extension | Complete event streams + IMU ego-motion | [Event_Turb_Datasets](https://pan.baidu.com/s/1anYvXzc6in3YCowZ2SBBGw?pwd=qaz3) (code: `qaz3`) |
+| **CTTH+** | TPAMI extension | Complete event streams + IMU ego-motion | [Event_Turb_Datasets](https://pan.baidu.com/s/1anYvXzc6in3YCowZ2SBBGw?pwd=qaz3) (code: `qaz3`) |
+| **LATH+** | TPAMI extension | Complete event streams + IMU ego-motion | **Coming soon** |
 
 ### CTTH
 
-The **CTTH** dataset contains both static and dynamic scenes captured under controlled turbulence. Each sample provides synchronized frame and event measurements; the dynamic subset additionally contains optical-flow annotations used by the training pipeline.
-
-```text
-CTTH/
-├── Dynamic_Object/
-│   ├── Train/
-│   │   └── <sequence>/
-│   │       ├── GT/
-│   │       ├── Turb/
-│   │       └── Flow/
-│   └── Test/
-│       └── <sequence>/
-│           ├── GT/
-│           ├── Turb/
-│           └── Flow/
-└── Static_Object/
-    └── <sequence>/
-        ├── GT/
-        └── Turb/
-```
-
-| Static scene 1 | Static scene 2 |
-|:---:|:---:|
-| Ground truth | Ground truth |
-| <img src="assets/static1_GT.png" width="360"> | <img src="assets/static2_GT.png" width="360"> |
-| Turbulence frames | Turbulence frames |
-| <img src="assets/static1_turb.gif" width="360"> | <img src="assets/static2_turb.gif" width="360"> |
-| Events | Events |
-| <img src="assets/static1_events.gif" width="360"> | <img src="assets/static2_events.gif" width="360"> |
-
-| Dynamic scene 1 | Dynamic scene 2 |
-|:---:|:---:|
-| Ground truth | Ground truth |
-| <img src="assets/dynamic1_GT.gif" width="360"> | <img src="assets/dynamic2_gt.gif" width="360"> |
-| Turbulence frames | Turbulence frames |
-| <img src="assets/dynamic1_Turb.gif" width="360"> | <img src="assets/dynamic2_turb.gif" width="360"> |
-| Events | Events |
-| <img src="assets/dynamic1_event.gif" width="360"> | <img src="assets/dynamic2_event.gif" width="360"> |
+The **CTTH** dataset contains static and dynamic-object scenes captured under controlled turbulence. It provides synchronized intensity frames, time-sliced events, timestamps, ground truth, and optical flow for dynamic-object scenes.
 
 ### LATH
 
-The **LATH** dataset contains event and frame measurements captured over real atmospheric paths ranging from 3.5 km to 8 km. It is intended to evaluate generalization under realistic, long-range turbulence.
+The **LATH** dataset contains synchronized frame and time-sliced event measurements captured over real atmospheric paths ranging from 3.5 km to 8 km. It is intended for evaluating generalization under realistic long-range turbulence.
 
-| Distance | Turbulence frames | Events |
-|:---:|:---:|:---:|
-| 3.5 km | <img src="assets/3.5km_turb.gif" width="320"> | <img src="assets/3.5km_event.gif" width="320"> |
-| 5 km | <img src="assets/5km_turb.gif" width="320"> | <img src="assets/5km_Event_video.gif" width="320"> |
-| 6.5 km | <img src="assets/6.5km_turb.gif" width="320"> | <img src="assets/6.5km_Event_video.gif" width="320"> |
-| 8 km | <img src="assets/8km_turb.gif" width="320"> | <img src="assets/8km_Event_video.gif" width="320"> |
+### EFTSim
 
-The event data are stored as `.npz` files containing `x`, `y`, `p`, and `t`. Data were captured with an [ALPIX-Pizol event camera](https://en.alpsentek.com/new/gesp-hybrid-vision-sensor-alpix-pizol-apx014-unveiled-alpsentek-expands-machine-perception-dynamics/).
+**EFTSim** is a simulated event-based turbulence dataset developed for the TPAMI extension. It provides complete event streams, IMU-based platform ego-motion measurements, clean reference frames, degraded frames, and optical-flow or clean-image-gradient supervision. For compatibility, EFTSim retains the internal identifier **EFTurb** (`efturb`) in the released code, command-line options, split filenames, and checkpoints.
+
+### CTTH+
+
+**CTTH+** extends the controlled real-world turbulence data for the TPAMI study. In contrast to the time-sliced events in CTTH, CTTH+ provides complete event streams, IMU-based platform ego-motion measurements, clean and degraded frames, and motion or gradient supervision where available.
+
+### LATH+
+
+**LATH+** is the extended long-range real-world dataset developed for the TPAMI study. It provides complete event streams and IMU-based platform ego-motion measurements for long-range atmospheric-turbulence sequences.
+
+> **Release status:** LATH+ is not yet publicly available. The download will be added here—stay tuned.
+
+### Data formats
+
+#### CTTH and LATH: time-sliced events
+
+```text
+Dataset/
+├── CTTH/
+│   ├── Dynamic_Object/
+│   │   ├── Train/
+│   │   │   ├── seq_000/
+│   │   │   │   ├── GT/
+│   │   │   │   │   ├── frames/
+│   │   │   │   │   ├── events/
+│   │   │   │   │   ├── frame_timestamp.txt
+│   │   │   │   │   └── event_timestamp.txt
+│   │   │   │   ├── Turb/
+│   │   │   │   │   ├── frames/
+│   │   │   │   │   ├── events/
+│   │   │   │   │   ├── frame_timestamp.txt
+│   │   │   │   │   └── event_timestamp.txt
+│   │   │   │   └── Flow/
+│   │   │   └── ...
+│   │   └── Test/
+│   │       ├── seq_000/
+│   │       └── ...
+│   └── Static/
+│       ├── Train/
+│       │   ├── seq_000/
+│       │   │   ├── turb/
+│       │   │   ├── event/
+│       │   │   ├── frame_timestamp.txt
+│       │   │   ├── event_timestamp.txt
+│       │   │   └── gt.jpg
+│       │   └── ...
+│       └── Test/
+│           ├── seq_000/
+│           └── ...
+└── LATH/
+    ├── seq_000/
+    │   ├── turb/
+    │   ├── events/
+    │   ├── frame_timestamp.txt
+    │   └── event_timestamp.txt
+    └── ...
+```
+
+Each CTTH or LATH sequence contains synchronized frame images, event data, and corresponding timestamps. Directory names vary slightly across subsets, as shown above.
+
+- **`frames/` or `turb/`:** intensity images captured at a fixed frame rate of 25 Hz.
+- **`events/` or `event/`:** time-sliced event-camera measurements encoded as positive event = `200`, negative event = `100`, and background = `0`.
+- **`frame_timestamp.txt`:** timestamps for the intensity frames.
+- **`event_timestamp.txt`:** timestamps for the event slices.
+- **`Flow/`** (when available): ground-truth optical flow for dynamic-object scenes.
+
+CTTH and LATH were captured with the [ALPIX-Pizol camera](https://www.alpsentek.com/), which outputs events in a time-sliced format rather than as fully asynchronous streams. All events in one slice share a timestamp and represent the events accumulated over a short 1 ms window. This representation should be considered during voxelization and temporal alignment. The provided [`tools/event_processing.py`](tools/event_processing.py) script converts the time-sliced events into voxels and polarity-alternation statistics.
+
+#### EFTSim, CTTH+, and LATH+: complete event streams with IMU
+
+The TPAMI-extension datasets share the following high-level organization. Exact subdirectory names may vary slightly between `Flow/` and `Optical_Flow/`, but the contents follow the same logic.
+
+```text
+<dataset>/
+└── <sequence>/
+    ├── GT/
+    │   └── frames/                         # Clean reference images
+    ├── Flow/ or Optical_Flow/
+    │   ├── optical_flow/                   # Motion of dynamic scenes or objects
+    │   └── clean_image_gradient/           # Gradients of the clean images
+    └── Turb/
+        ├── frames/                         # Turbulence-degraded images
+        ├── events_raw/                     # Original complete event stream
+        ├── voxel_raw/                      # Voxels built from the original events
+        ├── events_ego_motion_compensated/  # Ego-motion-compensated events
+        ├── voxel_ego_motion_compensated/   # Voxels built after compensation
+        └── ego_motion/                     # IMU platform ego-motion measurements
+```
+
+The `Flow/` or `Optical_Flow/` directory may be omitted when optical-flow or gradient supervision is not applicable. The `Turb/` directory preserves both the original and ego-motion-compensated event representations so that compensation and alignment strategies can be evaluated consistently.
 
 ## Code and Models
 
@@ -192,7 +223,7 @@ Download and extract the checkpoint package, then place the three `.pt` files in
 
 ### Model-ready data layout
 
-The released loaders expect preprocessed EFTSim and CTTH+ data in the following layouts. EFTSim retains the internal identifier `EFTurb` for compatibility with the code and checkpoints. Dataset locations are always supplied through command-line arguments; no machine-specific absolute paths are embedded in the code.
+The released training loaders consume the following preprocessed subsets of EFTSim and CTTH+. The complete dataset packages additionally provide the original event streams, ego-motion-compensated events, corresponding voxels, and IMU ego-motion measurements described in [Data formats](#data-formats). EFTSim retains the internal identifier `EFTurb` for compatibility with the code and checkpoints. Dataset locations are supplied through command-line arguments.
 
 <details>
 <summary><strong>EFTSim layout (EFTurb in code)</strong></summary>
