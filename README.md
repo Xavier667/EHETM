@@ -429,7 +429,3 @@ If this work or the released datasets are useful in your research, please cite o
     pages     = {29514-29525}
 }
 ```
-
-## 🙏 Acknowledgements
-
-This project builds upon PyTorch, Mamba, causal-conv1d, LPIPS, and other open-source software. We sincerely thank their authors and maintainers for making their work available to the research community. We also thank everyone who contributed to data acquisition, annotation, experimental evaluation, and the maintenance of the released datasets and code.
