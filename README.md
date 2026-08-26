@@ -126,7 +126,7 @@ Dataset/
 Each CTTH or LATH sequence contains synchronized frame images, event data, and corresponding timestamps. Directory names vary slightly across subsets, as shown above.
 
 - **`frames/` or `turb/`:** intensity images captured at a fixed frame rate of 25 Hz.
-- **`events/` or `event/`:** time-sliced event-camera measurements encoded as positive event = `200`, negative event = `100`, and background = `0`.
+- **`events/` or `event/`:** time-sliced events encoded as positive event = `200`, negative event = `100`, and background = `0`.
 - **`frame_timestamp.txt`:** timestamps for the intensity frames.
 - **`event_timestamp.txt`:** timestamps for the event slices.
 - **`Flow/`** (when available): ground-truth optical flow for dynamic-object scenes.
