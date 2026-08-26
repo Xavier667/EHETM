@@ -2,9 +2,8 @@
 
 <p align="center">
   <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf"><img src="https://img.shields.io/badge/CVPR_2026-Paper-1f6feb.svg" alt="CVPR 2026 paper"></a>
-  <a href="https://arxiv.org/abs/2603.20708"><img src="https://img.shields.io/badge/arXiv-2603.20708-b31b1b.svg" alt="arXiv"></a>
   <a href="https://youtu.be/oZrPr5Mmn6c?si=PvmLqcTke8P2lcFD"><img src="https://img.shields.io/badge/Video-YouTube-ff0000.svg?logo=youtube" alt="Video"></a>
-  <a href="#datasets"><img src="https://img.shields.io/badge/Datasets-CTTH%20%7C%20LATH%20%7C%20CTTH%2B%20%7C%20EFTSim-2ea44f.svg" alt="Datasets"></a>
+  <a href="#datasets"><img src="https://img.shields.io/badge/Datasets-Events&Images-2ea44f.svg" alt="Datasets"></a>
   <a href="#code-and-models"><img src="https://img.shields.io/badge/Code-PyTorch-ee4c2c.svg?logo=pytorch" alt="Code"></a>
 </p>
 
