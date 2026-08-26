@@ -61,7 +61,7 @@ The **CTTH** dataset contains static and dynamic-object scenes captured under co
 
 ### LATH
 
-The **LATH** dataset contains synchronized frame and time-sliced event measurements captured over real-world atmospheric paths ranging from 3.5 km to 8 km. It is intended for evaluating generalization under realistic long-range atmospheric turbulence.
+The **LATH** dataset contains synchronized frame and time-sliced event measurements captured over real-world atmospheric paths ranging from 1 km to 8 km. It is intended for evaluating generalization under realistic long-range atmospheric turbulence.
 
 ### EFTSim
 
@@ -69,7 +69,7 @@ The **LATH** dataset contains synchronized frame and time-sliced event measureme
 
 ### CTTH+
 
-**CTTH+** extends the controlled real-world thermal turbulence data for the TPAMI study. In contrast to the time-sliced events in CTTH, CTTH+ provides complete event streams, IMU-based platform ego-motion measurements, clean and degraded frames, and motion or gradient supervision where available.
+**CTTH+** extends CTTH with controlled real-world thermal-turbulence sequences covering both static and dynamic scenes. Unlike CTTH, which represents events as temporal slices, CTTH+ provides complete event streams, IMU-based platform ego-motion measurements, paired clean and turbulence-degraded frames, clean-image gradients, and optical-flow annotations for dynamic scenes.
 
 ### LATH+
 
