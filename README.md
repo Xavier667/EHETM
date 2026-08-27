@@ -305,12 +305,12 @@ The joint checkpoint uses the same command with `restoration_event_guided_finetu
 LATH+ consists of real long-range atmospheric-turbulence sequences and does not provide ground-truth clean images. Use the joint checkpoint and explicitly disable GT evaluation:
 
 ```bash
-python infer_final.py 
-  --checkpoint checkpoints/restoration_event_guided_finetune_Joint.pt 
-  --data-format real 
-  --data-root /path/to/LATH+_Dataset 
-  --gt none 
-  --output outputs/lath_plus 
+python infer_final.py \
+  --checkpoint checkpoints/restoration_event_guided_finetune_Joint.pt \
+  --data-format real \
+  --data-root /path/to/LATH+_Dataset \
+  --gt none \
+  --output outputs/lath_plus \
   --tile-size 512 --overlap 64 --amp --save-guide
 ```
 
