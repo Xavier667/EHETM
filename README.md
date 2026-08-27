@@ -18,11 +18,12 @@
   <a href="#-citation">Citation</a>
 </p>
 
-Official PyTorch implementation of **EHETM**, an event-guided framework for high-quality and efficient turbulence mitigation. The repository includes the complete staged training pipeline, unified inference for simulated and real-world data, pretrained checkpoints, and resources for the CVPR 2026 datasets **CTTH** and **LATH** and the TPAMI-extension (under review) datasets **EFTSim** and **CTTH+**. **LATH+** will be released later.
+Official PyTorch implementation of **EHETM**, an event-guided framework for high-quality and efficient turbulence mitigation. The repository includes the complete staged training pipeline, unified inference for simulated and real-world data, pretrained checkpoints, and resources for the CVPR 2026 datasets **CTTH** and **LATH** and the TPAMI-extension (under review) datasets **EFTSim**, **CTTH+**, and **LATH+**.
 
 ## 🚀 News
 
-- **2026-08-25:** **EFTSim and CTTH+** are now publicly available from the [dataset downloads](#-datasets). LATH+ will be released later.
+- **2026-08-27:** **LATH+** is now publicly available from the [dataset downloads](#-datasets).
+- **2026-08-25:** **EFTSim and CTTH+** are now publicly available from the [dataset downloads](#-datasets).
 - **2026-08-19:** Training and inference code is now available.
 - **2026-06-26:** An extended version of this work has been submitted to **TPAMI** and is currently **under review**. The extension introduces EFTSim, CTTH+, and LATH+ datasets.
 - **2026-06-05:** The official CVPR 2026 paper is now available from [CVF Open Access](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf).
@@ -52,7 +53,7 @@ This repository covers five event-based turbulence datasets. CTTH and LATH were 
 | **LATH** | CVPR 2026 | Time-sliced events | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
 | **EFTSim** | TPAMI extension | Event streams + Voxel + IMU ego-motion measurements | [Baidu Netdisk](https://pan.baidu.com/s/13n8OSe2zXJLfZOKWRVtWEQ?pwd=qaz3) (code: `qaz3`) |
 | **CTTH+** | TPAMI extension | Event streams + Voxel + IMU ego-motion measurements | [Baidu Netdisk](https://pan.baidu.com/s/13n8OSe2zXJLfZOKWRVtWEQ?pwd=qaz3) (code: `qaz3`) |
-| **LATH+** | TPAMI extension | Event streams + Voxel + IMU ego-motion measurements | **Coming soon** |
+| **LATH+** | TPAMI extension | Event streams + Voxel + IMU ego-motion measurements | [Baidu Netdisk](https://pan.baidu.com/s/1j4LafWu_KJfspWpZL1b8MQ?pwd=qaz3) (code: `qaz3`) |
 
 ### CTTH
 
@@ -74,7 +75,7 @@ The **LATH** dataset contains synchronized frame and time-sliced event measureme
 
 **LATH+** is the extended long-range real-world dataset developed for the TPAMI extension. It provides complete event streams and IMU-based platform ego-motion measurements for long-range atmospheric-turbulence sequences.
 
-> **Release status:** LATH+ is not yet publicly available. The download will be added here—stay tuned.
+> **Download:** [Baidu Netdisk](https://pan.baidu.com/s/1j4LafWu_KJfspWpZL1b8MQ?pwd=qaz3) · Extraction code: `qaz3`
 
 ### Data formats
 
