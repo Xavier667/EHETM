@@ -300,7 +300,7 @@ python infer_final.py \
 
 The joint checkpoint uses the same command with `restoration_event_guided_finetune_Joint.pt` and either supported `--data-format`.
 
-### LATH+ (real event-camera data)
+### LATH+ (real atmospheric turbulence)
 
 LATH+ consists of real long-range atmospheric-turbulence sequences and does not provide ground-truth clean images. Use the joint checkpoint and explicitly disable GT evaluation:
 
