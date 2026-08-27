@@ -300,32 +300,45 @@ python infer_final.py \
 
 The joint checkpoint uses the same command with `restoration_event_guided_finetune_Joint.pt` and either supported `--data-format`.
 
-### Real event-camera data
+### LATH+ (real event-camera data)
 
-Ground truth is optional for real measurements:
+LATH+ consists of real long-range atmospheric-turbulence sequences and does not provide ground-truth clean images. Use the joint checkpoint and explicitly disable GT evaluation:
 
 ```bash
-python infer_final.py \
-  --checkpoint checkpoints/restoration_event_guided_finetune_Joint.pt \
-  --data-format real \
-  --data-root /path/to/real_sequences \
-  --gt none \
-  --output outputs/real \
+python infer_final.py 
+  --checkpoint checkpoints/restoration_event_guided_finetune_Joint.pt 
+  --data-format real 
+  --data-root /path/to/LATH+_Dataset 
+  --gt none 
+  --output outputs/lath_plus 
   --tile-size 512 --overlap 64 --amp --save-guide
 ```
 
-Each real sequence may use `frames/`, `events/`, and `event_voxel/`; the EFTSim and CTTH+ layouts are also accepted. If ground truth is present, use `gt/` or `ground_truth/` and retain the default `--gt auto`.
+With `--data-format real`, the script recursively discovers all valid LATH+ sequences under `--data-root`; no train/test split or test manifest is applied. Each sequence follows this inference layout:
 
-Inference writes restored PNG files, optional guidance maps, per-frame `metrics.csv`, and `summary.json`. Only the following image-quality metrics are reported:
+```text
+LATH+_Dataset/
+└── <sequence>/
+    └── Turb/
+        ├── frames/            # Turbulence-degraded intensity frames
+        ├── events/            # Ego-motion-compensated event streams
+        ├── event_voxel/       # Voxels from compensated events
+        ├── events_raw/        # Original event streams
+        ├── event_raw_voxel/   # Voxels from original events
+        └── ego_motion/        # IMU platform ego-motion measurements
+```
+
+The default LATH+ inference path consumes `Turb/frames/`, `Turb/events/`, and `Turb/event_voxel/`. The raw event streams, raw-event voxels, and IMU measurements are retained in the dataset for further research but are not read directly by this command. Because LATH+ has no GT, keep `--gt none`.
+
+For every supported data format, inference saves restored PNGs in per-sequence output folders, optional guidance maps when `--save-guide` is enabled, a `metrics.csv` file with one row per restored frame, and `summary.json`. Image-quality metrics are computed only when ground truth is available:
 
 - PSNR on grayscale images in `[0, 1]`;
 - SSIM on grayscale images in `[0, 1]`;
 - LPIPS after converting grayscale inputs to three channels in `[-1, 1]`.
 
-When ground truth is unavailable, metric values are left empty.
+For LATH+, the PSNR, SSIM, and LPIPS fields in `metrics.csv` remain empty, while `mean_psnr`, `mean_ssim`, and `mean_lpips` in `summary.json` are `null`.
 
 Useful options include `--temporal-mode sliding-center`, `--temporal-mode nonoverlap-all`, `--max-samples N`, `--save-guide`, `--frames`, and `--voxel-scale`. Run `python infer_final.py --help` for the complete interface.
-
 ## Training
 
 All training scripts support command-line data and output paths. Run commands from `EHETM/Code`.
