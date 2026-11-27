@@ -24,7 +24,6 @@ Official PyTorch implementation of **EHETM**, an event-guided framework for high
 - **2026-08-27:** **LATH+** is now publicly available from the [dataset downloads](#-datasets).
 - **2026-08-25:** **EFTSim and CTTH+** are now publicly available from the [dataset downloads](#-datasets).
 - **2026-08-19:** Training and inference code is now available.
-- **2026-06-26:** An extended version of this work has been submitted to **TPAMI** and is currently **under review**. The extension introduces EFTSim, CTTH+, and LATH+ datasets.
 - **2026-06-05:** The official CVPR 2026 paper is now available from [CVF Open Access](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_High-Quality_and_Efficient_Turbulence_Mitigation_with_Events_CVPR_2026_paper.pdf).
 - **2026-03-27:** The CTTH and LATH datasets are released.
 - **2026-03-25:** The paper is published on [arXiv](https://arxiv.org/abs/2603.20708).
@@ -50,9 +49,9 @@ This repository covers five event-based turbulence datasets. CTTH and LATH were 
 | --- | --- | --- | --- |
 | **CTTH** | CVPR 2026 | Time-sliced events | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
 | **LATH** | CVPR 2026 | Time-sliced events | [Baidu Netdisk](https://pan.baidu.com/s/1XsDaJTYYfcgNENzEL0_wqw?pwd=qaz3) (code: `qaz3`) |
-| **EFTSim** | TPAMI extension | Event streams + Voxel + IMU ego-motion measurements | [Baidu Netdisk](https://pan.baidu.com/s/1daOp3W2x6faBIhd7YOaElA?pwd=p8cg) (code: `p8cg`) |
-| **CTTH+** | TPAMI extension | Event streams + Voxel + IMU ego-motion measurements | [Baidu Netdisk](https://pan.baidu.com/s/1wdBz4eoLkBMFxZ2y4hBjJg?pwd=qaz3) (code: `qaz3`) |
-| **LATH+** | TPAMI extension | Event streams + Voxel + IMU ego-motion measurements | [Baidu Netdisk](https://pan.baidu.com/s/1j4LafWu_KJfspWpZL1b8MQ?pwd=qaz3) (code: `qaz3`) |
+| **EFTSim** | Extension | Event streams + Voxel + IMU ego-motion measurements | [Baidu Netdisk](https://pan.baidu.com/s/1daOp3W2x6faBIhd7YOaElA?pwd=p8cg) (code: `p8cg`) |
+| **CTTH+** | Extension | Event streams + Voxel + IMU ego-motion measurements | [Baidu Netdisk](https://pan.baidu.com/s/1wdBz4eoLkBMFxZ2y4hBjJg?pwd=qaz3) (code: `qaz3`) |
+| **LATH+** | Extension | Event streams + Voxel + IMU ego-motion measurements | [Baidu Netdisk](https://pan.baidu.com/s/1j4LafWu_KJfspWpZL1b8MQ?pwd=qaz3) (code: `qaz3`) |
 
 ### CTTH
 
