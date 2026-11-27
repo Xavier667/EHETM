@@ -17,7 +17,7 @@
   <a href="#-citation">Citation</a>
 </p>
 
-Official PyTorch implementation of **EHETM**, an event-guided framework for high-quality and efficient turbulence mitigation. The repository includes the complete staged training pipeline, unified inference for simulated and real-world data, pretrained checkpoints, and resources for the CVPR 2026 datasets **CTTH** and **LATH** and the TPAMI-extension (under review) datasets **EFTSim**, **CTTH+**, and **LATH+**.
+Official PyTorch implementation of **EHETM**, an event-guided framework for high-quality and efficient turbulence mitigation. The repository includes the complete staged training pipeline, unified inference for simulated and real-world data, pretrained checkpoints, and resources for the CVPR 2026 datasets **CTTH** and **LATH** and the extension datasets **EFTSim**, **CTTH+**, and **LATH+**.
 
 ## 🚀 News
 
@@ -43,7 +43,7 @@ Official PyTorch implementation of **EHETM**, an event-guided framework for high
 
 ## 📦 Datasets
 
-This repository covers five event-based turbulence datasets. CTTH and LATH were introduced with the CVPR 2026 paper. EFTSim, CTTH+, and LATH+ form the dataset suite developed for the TPAMI extension, which is currently under review.
+This repository covers five event-based turbulence datasets. CTTH and LATH were introduced with the CVPR 2026 paper. EFTSim, CTTH+, and LATH+ form the dataset suite developed for the extension, which is currently under review.
 
 | Dataset | Release group | Event representation | Availability |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@ The **LATH** dataset contains synchronized frame and time-sliced event measureme
 
 ### EFTSim
 
-**EFTSim** is a simulated event-based turbulence dataset developed for the TPAMI extension. It provides complete event streams, IMU-based platform ego-motion measurements, clean reference frames, degraded frames, and optical-flow or clean-image-gradient supervision. For compatibility, EFTSim retains the internal identifier **EFTurb** (`efturb`) in the released code, command-line options, split filenames, and checkpoints.
+**EFTSim** is a simulated event-based turbulence dataset developed for the extension. It provides complete event streams, IMU-based platform ego-motion measurements, clean reference frames, degraded frames, and optical-flow or clean-image-gradient supervision. For compatibility, EFTSim retains the internal identifier **EFTurb** (`efturb`) in the released code, command-line options, split filenames, and checkpoints.
 
 ### CTTH+
 
@@ -71,7 +71,7 @@ The **LATH** dataset contains synchronized frame and time-sliced event measureme
 
 ### LATH+
 
-**LATH+** is the extended long-range real-world dataset developed for the TPAMI extension. It provides complete event streams and IMU-based platform ego-motion measurements for long-range atmospheric-turbulence sequences.
+**LATH+** is the extended long-range real-world dataset developed for the extension. It provides complete event streams and IMU-based platform ego-motion measurements for long-range atmospheric-turbulence sequences.
 
 > **Download:** [Baidu Netdisk](https://pan.baidu.com/s/1j4LafWu_KJfspWpZL1b8MQ?pwd=qaz3) · Extraction code: `qaz3`
 
@@ -133,7 +133,7 @@ CTTH and LATH are captured with the [ALPIX-Pizol camera](https://www.alpsentek.c
 
 #### EFTSim, CTTH+, and LATH+: complete event streams with IMU
 
-The TPAMI-extension datasets share the following high-level organization. Exact subdirectory names may vary slightly between `Flow/` and `Optical_Flow/`, but the contents follow the same logic.
+The extension datasets share the following high-level organization. Exact subdirectory names may vary slightly between `Flow/` and `Optical_Flow/`, but the contents follow the same logic.
 
 ```text
 <dataset>/
